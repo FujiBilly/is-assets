@@ -1,0 +1,23 @@
+{
+  "name": "is-assets",
+  "version": "1.0.0",
+  "description": "Mapping file suffixes to Content-Type for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FujiBilly/is-assets.git"
+  },
+  "keywords": [],
+  "author": "Billy Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FujiBilly/is-assets/issues"
+  },
+  "homepage": "https://github.com/FujiBilly/is-assets#readme",
+  "devDependencies": {
+    "jest": "^27.0.3"
+  }
+}
