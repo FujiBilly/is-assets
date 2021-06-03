@@ -21,15 +21,17 @@ js代码示例
 ``` js
 const TypeMap = require('is-assets');
 
-const jsType = TypeMap('js') // application/x-javascript;
-const jpgType = TypeMap('jpg') // image/jpeg;
+const jsType = TypeMap('js') // application/x-javascript
+const jpgType = TypeMap('jpg') // image/jpeg
+const mp4Type = TypeMap('mp4') // undefined
 ```
 ts代码示例
 ``` ts
 import TypeMap from 'is-assets';
 
-const jsType = TypeMap('js') // application/x-javascript;
-const jpgType = TypeMap('jpg') // image/jpeg;
+const jsType = TypeMap('js') // application/x-javascript
+const jpgType = TypeMap('jpg') // image/jpeg
+const mp4Type = TypeMap('mp4') // undefined
 ```
 
 **`扩展npm包的类型map`**
@@ -42,9 +44,9 @@ const customMap = {
 };
 const MyTypeMap = require('is-assets')(customMap);
 
-const jsType = MyTypeMap('js') // application/x-javascript;
-const txtType = MyTypeMap('txt') // text/plain;
-const mp4Type = MyTypeMap('mp4') // video/mp4;
+const jsType = MyTypeMap('js') // application/x-javascript
+const txtType = MyTypeMap('txt') // text/plain
+const mp4Type = MyTypeMap('mp4') // video/mp4
 ```
 ts代码示例
 ``` ts
@@ -55,7 +57,7 @@ const customMap = {
 import TypeMap from 'is-assets';
 const MyTypeMap = TypeMap(customMap);
 
-const jsType = MyTypeMap('js') // application/x-javascript;
-const txtType = MyTypeMap('txt') // text/plain;
-const mp4Type = MyTypeMap('mp4') // video/mp4;
+const jsType = MyTypeMap('js') // application/x-javascript
+const txtType = MyTypeMap('txt') // text/plain
+const mp4Type = MyTypeMap('mp4') // video/mp4
 ```
