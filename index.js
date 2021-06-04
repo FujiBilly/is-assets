@@ -1,3 +1,4 @@
 'use strict';
 
-module.exports = require('./lib/is_assets');
+exports.assetsMapping = require('./lib/assets_mapping');
+exports.ASSETS_TYPE = require('./lib/type');

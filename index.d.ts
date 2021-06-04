@@ -1,2 +1,3 @@
-export default function(suffix: string): string;
-export default function(customMap: Map<string, string>): (suffix: string) => string;
+export const ASSETS_TYPE: Map<string, string>;
+export function assetsMapping(suffix: string): string;
+export function assetsMapping(customMap: Map<string, string>): (suffix: string) => string;

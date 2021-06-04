@@ -19,19 +19,23 @@ HTTP传输文件时根据静态文件名后缀判定Content-Type，便于文件�
 
 js代码示例
 ``` js
-const TypeMap = require('is-assets');
+const { assetsMapping, ASSETS_TYPE } = require('is-assets');
 
-const jsType = TypeMap('js') // application/x-javascript
-const jpgType = TypeMap('jpg') // image/jpeg
-const mp4Type = TypeMap('mp4') // undefined
+console.log(ASSETS_TYPE); // npm包自带的静态类型映射关系
+
+const jsType = assetsMapping('js') // application/x-javascript
+const jpgType = assetsMapping('jpg') // image/jpeg
+const mp4Type = assetsMapping('mp4') // undefined
 ```
 ts代码示例
 ``` ts
-import TypeMap from 'is-assets';
+import { assetsMapping, ASSETS_TYPE } from 'is-assets';
 
-const jsType = TypeMap('js') // application/x-javascript
-const jpgType = TypeMap('jpg') // image/jpeg
-const mp4Type = TypeMap('mp4') // undefined
+console.log(ASSETS_TYPE); // npm包自带的静态类型映射关系
+
+const jsType = assetsMapping('js') // application/x-javascript
+const jpgType = assetsMapping('jpg') // image/jpeg
+const mp4Type = assetsMapping('mp4') // undefined
 ```
 
 **`扩展npm包的类型map`**
@@ -42,11 +46,12 @@ const customMap = {
   txt: 'text/plain',
   mp4: 'video/mp4'
 };
-const MyTypeMap = require('is-assets')(customMap);
+const { assetsMapping } = require('is-assets');
+const MyAssetsMapping = assetsMapping(customMap);
 
-const jsType = MyTypeMap('js') // application/x-javascript
-const txtType = MyTypeMap('txt') // text/plain
-const mp4Type = MyTypeMap('mp4') // video/mp4
+const jsType = MyAssetsMapping('js') // application/x-javascript
+const txtType = MyAssetsMapping('txt') // text/plain
+const mp4Type = MyAssetsMapping('mp4') // video/mp4
 ```
 ts代码示例
 ``` ts
@@ -54,10 +59,10 @@ const customMap = {
   txt: 'text/plain',
   mp4: 'video/mp4'
 };
-import TypeMap from 'is-assets';
-const MyTypeMap = TypeMap(customMap);
+import { assetsMapping } from 'is-assets';
+const MyAssetsMapping = assetsMapping(customMap);
 
-const jsType = MyTypeMap('js') // application/x-javascript
-const txtType = MyTypeMap('txt') // text/plain
-const mp4Type = MyTypeMap('mp4') // video/mp4
+const jsType = MyAssetsMapping('js') // application/x-javascript
+const txtType = MyAssetsMapping('txt') // text/plain
+const mp4Type = MyAssetsMapping('mp4') // video/mp4
 ```
